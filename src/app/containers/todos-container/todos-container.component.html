@@ -1,0 +1,11 @@
+<section class="todos-container">
+  <div class="column">
+    <app-todos-list title="Completed todos" [todos]="completedTodos$ | async" (updateTodo)="updateTodo($event)"></app-todos-list>
+  </div>
+  <div class="column">
+    <app-add-todo-form [todos]="todos$ | async" (addTodo)="addTodo($event)"></app-add-todo-form>
+  </div>
+  <div class="column">
+    <app-todos-list title="Incomplete todos" [todos]="incompleteTodos$ | async" (updateTodo)="updateTodo($event)"></app-todos-list>
+  </div>
+</section>

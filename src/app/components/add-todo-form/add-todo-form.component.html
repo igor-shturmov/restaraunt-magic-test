@@ -1,0 +1,8 @@
+<form [formGroup]="form" class="form">
+  <label>
+    Add todo
+    <input type="text" formControlName="title">
+  </label>
+
+  <button [disabled]="form.invalid || !isTitleUnique" (click)="onAddTodo()">Add todo</button>
+</form>

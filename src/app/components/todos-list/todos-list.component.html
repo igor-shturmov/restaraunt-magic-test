@@ -1,0 +1,11 @@
+<section class="todos">
+  <header class="todos-header">
+    <span class="todos-header_title">{{title}}</span>
+  </header>
+  <ul class="todos-list">
+    <li *ngFor="let todo of todos" class="todos-list_item">
+      <input type="checkbox" (change)="updateTodo.emit(todo)" [checked]="todo.completed">
+      {{ todo.title }}
+    </li>
+  </ul>
+</section>

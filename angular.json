@@ -10,7 +10,7 @@
       "prefix": "app",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "sass"
+          "style": "scss"
         }
       },
       "architect": {
@@ -62,7 +62,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "restaraunt-magic-test:build"
+            "browserTarget": "restaraunt-magic-test:build",
+            "port": 4202
           },
           "configurations": {
             "production": {
@@ -136,5 +137,8 @@
       }
     }
   },
-  "defaultProject": "restaraunt-magic-test"
+  "defaultProject": "restaraunt-magic-test",
+  "cli": {
+    "defaultCollection": "@datorama/akita"
+  }
 }
